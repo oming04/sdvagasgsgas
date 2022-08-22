@@ -1,0 +1,88 @@
+{
+  "name": "File Sharing Asupan",
+  "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://github.com/mrismanaziz/File-Sharing-Man",
+  "logo": "https://telegra.ph/file/9dc4e335feaaf6a214818.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Masukan Bot token, Dapatkan dari t.me/BotFather",
+      "value": ""
+    },
+    "OWNER": {
+      "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
+      "value": "SilenceSpe4ks",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Masukan User ID Telegram untuk Owner BOT",
+      "value": "1234567890",
+      "required": false
+    },
+    "ADMINS": {
+      "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
+      "value": "1924522854"
+    },
+    "APP_ID": {
+      "description": "Dapatkan APP ID di web my.telegram.org",
+      "value": "12161060"
+    },
+    "API_HASH": {
+      "description": "Dapatkan API HASH di web my.telegram.org",
+      "value": "4691596dd0db86df02cf7d54ec73bb68"
+    },
+    "CHANNEL_ID": {
+      "description": "Masukan ID Channel Untuk [Channel Database]",
+      "value": "-1001712520709"
+    },
+    "FORCE_SUB_CHANNEL": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
+      "value": "-100"
+    },
+    "FORCE_SUB_GROUP": {
+      "description": "Masukan ID dari Group Untuk Wajib Subscribenya",
+      "value": "0"
+    },
+    "START_MESSAGE": {
+      "description": "Pesan /start memulai awalan ke bot, Gunakan format parsemode HTML",
+      "value": "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
+      "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\n1. klik join 1, lalu join\n2. klik join 2, lalu join\n3. klik coba lagi, lalu start, dan selamat menonton\n\nJangan lupa follow twitter mimin juga ya</b>"
+    },
+    "CHANNEL":{
+      "description": "Masukan Username Channel anda Untuk Wajib Subscribenya [ Jangan Pake @ ]",
+      "value": "infobotmusik",
+      "required": false
+    },
+    "GROUP":{
+      "description": "Masukan Username dari Group anda Untuk Wajib Subscribenya [ Jangan Pake @ ]",
+      "value": "SharingUserbot",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
